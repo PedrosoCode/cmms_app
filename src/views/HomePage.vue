@@ -1,32 +1,68 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
+  <ion-content class="ion-padding">
+    <ion-text color="primary" class="ion-padding ion-text-center">
+      <h1>CMMS mobile</h1>
+    </ion-text>
 
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
-    </ion-content>
-  </ion-page>
+    <ion-card class="ion-padding">
+      <!-- Formulário -->
+      <ion-list lines="none">
+        <!-- Email -->
+        <ion-item class="ion-margin-bottom">
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          <ion-input
+            type="email"
+            placeholder="Email"
+            label="Email"
+            label-placement="floating"
+          ></ion-input>
+        </ion-item>
+
+        <!-- Senha -->
+        <ion-item class="ion-margin-bottom">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          <ion-input
+            type="password"
+            placeholder="Senha"
+            label="Senha"
+            label-placement="floating"
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <!-- Botão de Login -->
+      <ion-button
+        expand="block"
+        shape="round"
+        class="ion-margin"
+        color="primary"
+      >
+        Entrar
+      </ion-button>
+    </ion-card>
+  </ion-content>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonIcon,
+} from "@ionic/vue";
+import { addIcons } from "ionicons";
 </script>
 
 <style scoped>
-#container {
+/* #container {
   text-align: center;
   
   position: absolute;
@@ -52,5 +88,5 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue
 
 #container a {
   text-decoration: none;
-}
+} */
 </style>
