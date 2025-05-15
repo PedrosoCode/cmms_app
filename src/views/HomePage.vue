@@ -1,51 +1,17 @@
 <template>
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title>Login</ion-title>
+      <ion-title>Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="ion-padding">
     <ion-text color="primary" class="ion-padding ion-text-center">
-      <h1>CMMS mobile</h1>
+      <h1>a</h1>
     </ion-text>
 
-    <ion-card class="ion-padding">
-      <!-- Formulário -->
-      <ion-list lines="none">
-        <!-- Email -->
-        <ion-item class="ion-margin-bottom">
-          <ion-icon slot="start" name="mail-outline"></ion-icon>
-          <ion-input
-            type="email"
-            placeholder="Email"
-            label="Email"
-            label-placement="floating"
-          ></ion-input>
-        </ion-item>
-
-        <!-- Senha -->
-        <ion-item class="ion-margin-bottom">
-          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
-          <ion-input
-            type="password"
-            placeholder="Senha"
-            label="Senha"
-            label-placement="floating"
-          ></ion-input>
-        </ion-item>
-      </ion-list>
-
-      <!-- Botão de Login -->
-      <ion-button
-        expand="block"
-        shape="round"
-        class="ion-margin"
-        color="primary"
-      >
-        Entrar
-      </ion-button>
-    </ion-card>
+    <ion-button @click="() => router.push('/Login')">Voltar a login</ion-button>
+    <ion-button router-link="/page2" router-direction="back" :router-animation="myAnimation">Click Me</ion-button>
   </ion-content>
 </template>
 
@@ -56,37 +22,17 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonIcon,
+  IonIcon
 } from "@ionic/vue";
 import { addIcons } from "ionicons";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
 </script>
 
+    
+
 <style scoped>
-/* #container {
-  text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-} */
 </style>
